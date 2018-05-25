@@ -1,10 +1,11 @@
 package be.thyme;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FuckingThymeleaf implements Serializable {
-    private List<FuckingThymeleafChild> kids;
+    private List<FuckingThymeleafChild> kids = new ArrayList<>();
     private String version;
 
     public String getVersion() {

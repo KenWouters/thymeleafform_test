@@ -13,15 +13,16 @@
                 <tr>
                     <th th:text="een"></th>
                     <th th:text="twee"></th>
+                    <th><button type="submit" name="addChild">Add Row </button> </th>
                 </tr>
 
                 <tr th:each="kid, rowstat : *{kids}">
                     <td>TODO: Type ophalen</td>
-                    <td th:text="${kid.naam}">
-                        <!--<input type="hidden" th:name="*{kids[__${rowstat.index}__].careServiceCode}" th:field="*{kids[__${rowstat.index}__].careServiceCode}"/>-->
+                    <td> <!--th:text="${kid.naam}"-->>
+                        <input th:name="*{kids[__${rowstat.index}__].naam}" th:field="*{kids[__${rowstat.index}__].naam}"/>
                     </td>
-                    <td th:text="${kid.age}">
-                        <!--<input type="hidden" th:name="*{kids[__${rowstat.index}__].productNumber}" th:field="*{kids[__${rowstat.index}__].productNumber}"/>-->
+                    <td><!-- th:text="${kid.age}"-->>
+                        <input th:name="*{kids[__${rowstat.index}__].age}" th:field="*{kids[__${rowstat.index}__].age}"/>
                     </td>
                 </tr>
             </table>
