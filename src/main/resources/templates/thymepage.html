@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head></head>
+    <body>
+        <form th:object="${thyme}"
+                th:action="@{/create}"
+                name="applicationForm"
+                th:method="post">
+
+            <input type="text" th:field="*{version}"/>
+
+            <table>
+                <tr>
+                    <th th:text="een"></th>
+                    <th th:text="twee"></th>
+                </tr>
+
+                <tr th:each="kid, rowstat : *{kids}">
+                    <td>TODO: Type ophalen</td>
+                    <td th:text="${kid.naam}">
+                        <!--<input type="hidden" th:name="*{kids[__${rowstat.index}__].careServiceCode}" th:field="*{kids[__${rowstat.index}__].careServiceCode}"/>-->
+                    </td>
+                    <td th:text="${kid.age}">
+                        <!--<input type="hidden" th:name="*{kids[__${rowstat.index}__].productNumber}" th:field="*{kids[__${rowstat.index}__].productNumber}"/>-->
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>

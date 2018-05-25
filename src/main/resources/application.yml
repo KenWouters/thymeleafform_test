@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: thyme
+  datasource:
+    continue-on-error: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  error:
+    include-stacktrace: always
